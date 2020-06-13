@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hugo Talibart | PhD student at Université de Rennes 1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Hugo Talibart</a></h1>
+					<p>PhD student in <a href="https://www-dyliss.irisa.fr/">Dyliss</a> team <br/>
+						IRISA - Université de Rennes 1 <br/>
+						Rennes, France</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#phd" class="active">PhD project</a></li>
+						<li><a href="#misc">misc.</a></li>
+						<li><a href="#publications">publications</a></li>
+						<li><a href="#bio">bio</a></li>
+						<li><a href="#contact">contact</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://twitter.com/HTalibart" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<!--<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>-->
+						<li><a href="mailto:hugo.talibart@irisa.fr" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+							<section id="phd">
+								<div class="image main" data-position="center">
+									<img src="images/banner.jpg" alt="" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>PhD project</h2>
+										<p>Modelling proteins with long-distance interactions</p>
+									</header>
+									 <p>
+                        I am currently carrying out a PhD at the University of Rennes 1, in <a href="http://www.irisa.fr/dyliss"/>Dyliss</a> team,
+                under the supervision of <a href="http://www.irisa.fr/dyliss/francois.coste">François Coste</a>
+                and <a href="http://people.rennes.inria.fr/Jacques.Nicolas/">Jacques Nicolas</a>.
+                
+                    <br/>
+                    <br/>
+                    
+My thesis focuses on <b>protein homology search</b> and <b>protein family modelling</b>. As of today, the standard way of modelling a set of protein sequences is to use profile Hidden Markov Models. These statistical models represent protein families with positional information and insertion and deletion states. Widely used packages such as HH-suite provide tools to perform sequence-HMM alignment and HMM-HMM alignment and the similarity score they yield is used to determine whether two protein sequences are homologous or not. While powerful, HMMs are limited by their positional nature. It is well-known that two residues that are distant in the sequence can co-evolve, for instance because they are in contact in the 3D structure. In my work, I propose to use a different type of model: the <b>Potts model</b>. This model was introduced by <a href="https://en.wikipedia.org/wiki/Direct_coupling_analysis">Direct Coupling Analysis</a>, originally to predict contacts and protein-protein interactions. Its parameters can describe both positional conservation and couplings between positions, which make it a great candidate to model sets of homologous proteins. During my PhD, I designed ComPotts, a method to align two Potts models and give a similarity score for this alignment, which will be published very soon. This method is the equivalent of HH-suite's HH-align but instead of aligning two HMMs it aligns two Potts models.
+								</p>
+								</div>
+							</section>
+
+							
+							<section id="misc">
+								<div class="container">
+									<h3>Science outreach</h3>
+									 <p>As part of the 2018 Sciences en Cour[t]s festival, I explained my PhD project in a short video using slips of paper. (Video in french)</p>
+<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/OucnrOl-xSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+								</div>
+							</section>
+
+
+							<section id="publications">
+								<div class="container">
+									 <h3>Publications</h3>
+							                <!-- This document was automatically generated with bibtex2html 1.99
+									     (see http://www.lri.fr/~filliatr/bibtex2html/),
+									     with the following command:
+									     bibtex2html my_biblio.bib  -->
+
+
+									<table>
+
+									<tr valign="top">
+									<td align="right" class="bibtexnumber">
+									[<a name="talibart2020compotts">1</a>]
+									</td>
+									<td class="bibtexitem">
+									Hugo Talibart and Fran&#x00E7;ois Coste.
+									 Compotts: Optimal alignment of coevolutionary models for protein
+									  sequences.
+									 In <em>JOBIM 2020-Journ&eacute;es Ouvertes Biologie, Informatique et
+									  Math&eacute;matiques</em>, 2020.
+									[&nbsp;<a href="my_biblio_bib.html#talibart2020compotts">bib</a>&nbsp;]
+
+									</td>
+									</tr>
+
+
+									<tr valign="top">
+									<td align="right" class="bibtexnumber">
+									[<a name="dyrka2019estimating">2</a>]
+									</td>
+									<td class="bibtexitem">
+									Witold Dyrka, Mateusz Pyzik, Fran&#x00E7;ois Coste, and Hugo Talibart.
+									 Estimating probabilistic context-free grammars for proteins using
+									  contact map constraints.
+									 <em>PeerJ</em>, 7:e6559, 2019.
+									[&nbsp;<a href="my_biblio_bib.html#dyrka2019estimating">bib</a>&nbsp;]
+
+									</td>
+									</tr>
+									</table>
+								</div>
+							</section>
+
+
+							<section id="bio">
+								<div class="container">
+									<h3>Background</h3>
+
+									<date>2016-2017</date>
+									<cv_item>
+									    <item_name>Master's Degree in Theoretical Computer Science</item_name> <endroit>Université de Rouen, France</endroit>
+									    <br/>
+									    <cv_description>Automata theory, String Algorithms in Bioinformatics</cv_description>
+									 </cv_item>
+									   <br/>
+									 <date>2012-2017</date>
+									    <cv_item>
+									    <item_name>Engineering Degree in Mathematics</item_name> <endroit>Institut National des Sciences Appliquées de Rouen (INSA Rouen), France</endroit>
+									    <br/>
+									    <cv_description>Statistics, Artificial Intelligence, Operations Research</cv_description>
+									</cv_item>
+								</div>
+							</section>
+
+
+							<section id="contact">
+								<div class="container">
+									<h3>Contact</h3>
+								<p>
+								    Dyliss team, Irisa / Inria Rennes-Bretagne Atlantique, <br/>
+								    Campus de Beaulieu, 35042 Rennes Cedex, France. <br/>
+								    Tel: +33 (0) 2 99 84 22 32 <br/>
+								    E-mail: 
+									 
+									 <script language="JavaScript">
+									var username = "hugo.talibart";
+									var hostname = "irisa.fr";
+									var linktext = username + "@" + hostname ;
+									document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+									</script>
+								</p>
+
+								</div>
+							</section>
+
+
+						
+					
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
