@@ -3327,8 +3327,7 @@ cv_item
 
 cv_item item_name
 {
-    color: #671327;
-    font-size: 1.0em;
+    font-size: 0.9em;
     font-weight: bold;
     margin-bottom: 0px;
     margin-left: 10px;
@@ -3344,15 +3343,18 @@ cv_item cv_description
 {
     margin-left:10px;
     font-size:0.7em;
+    font-style: italic;
 }
 
 endroit
 {
-    margin-left:10px;
-    font-size: 0.7em;
+    color: #671327;
+    font-size: 1.0em;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-left: 10px;
 }
 
 date
 {
-    font-weight: bold;
 }
