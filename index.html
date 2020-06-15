@@ -66,8 +66,15 @@
                 
                     <br/>
                     <br/>
-                    
-		    My thesis focuses on <b>protein homology search</b> and <b>protein family modelling</b>. As of today, the standard way of modelling a set of protein sequences is to use profile Hidden Markov Models. These statistical models represent protein families with positional information and insertion and deletion states. Widely used packages such as HH-suite provide tools to perform sequence-HMM alignment and HMM-HMM alignment and the similarity score they yield is used to determine whether two protein sequences are homologous or not. While powerful, HMMs are limited by their positional nature. Yet, it is well-known that two residues that are distant in the sequence can co-evolve, for instance because they are in contact in the 3D structure. In our work, we propose to use a different type of model: the <b>Potts model</b>. This model was introduced by <a href="https://en.wikipedia.org/wiki/Direct_coupling_analysis">Direct Coupling Analysis</a>, originally to predict contacts and protein-protein interactions. Its parameters can describe both positional conservation and couplings between positions, which make it a great candidate to model sets of homologous proteins. During my PhD, I designed ComPotts, a method to align two Potts models and give a similarity score for this alignment: see our preliminary results <a href="https://www.biorxiv.org/content/10.1101/2020.06.12.147702v1">here</a>. 
+
+		    My thesis focuses on <b>protein homology search</b> and <b>protein family modelling</b>. As of today, the standard way of modelling a set of protein sequences is to use profile Hidden Markov Models. These statistical models represent protein families with positional information and insertion and deletion states. Widely used packages such as HH-suite provide tools to perform sequence-HMM alignment and HMM-HMM alignment and the similarity score they yield is used to determine whether two protein sequences are homologous or not. While powerful, HMMs are limited by their positional nature. Yet, it is well-known that two residues that are distant in the sequence can co-evolve, for instance because they are in contact in the 3D structure. In our work, we propose to use a different type of model: the <b>Potts model</b>. This model was introduced by <a href="https://en.wikipedia.org/wiki/Direct_coupling_analysis">Direct Coupling Analysis</a>, originally to predict contacts and protein-protein interactions. Its parameters can describe both positional conservation and couplings between positions, which make it a great candidate to model sets of homologous proteins.
+		    <br/>
+		    <br/>
+		    During my PhD, I designed <b>ComPotts</b>, a method to align two Potts models and give a similarity score for this alignment. Preliminary experiments to assess the quality of our alignments <cite_publi>[1]</cite_publi> on a small dataset of 59 reference pairwise alignments yielded encouraging results: a better recall and a slightly better precision than our main competitors (HH-align, MRFalign and BLAST). We are currently working on larger scale validation experiments (to be published <cite_publi>[2]</cite_publi>), and the next step will be to apply it to homology search.
+		    <br/>
+		    <br/>
+		    Early in my thesis, I also had the opportunity to work with <a href="http://www.kotulska-lab.pwr.wroc.pl/websites/wdyrka/doku.php?id=wiki:people:witold">Witold Dyrka</a> from Politechnika Wrocławska (Wrocław, Poland) on probabilistic context-free grammars with contact map constraints on proteins <cite_publi>[3]</cite_publi>. In this work, we established a framework to train probabilistic context-free grammars representing families of protein sequences using information on contact constraints.
+
 								</p>
 								</div>
 							</section>
@@ -87,7 +94,7 @@
 
 									<tr valign="top">
 									<td align="right" class="bibtexnumber">
-									[<a name="talibart2020compotts">1</a>]
+									[<a name="talibart2020compotts" href="https://www.biorxiv.org/content/10.1101/2020.06.12.147702v1">1</a>]
 									</td>
 									<td class="bibtexitem">
 									Hugo Talibart and Fran&#x00E7;ois Coste.
@@ -100,10 +107,24 @@
 									</td>
 									</tr>
 
+									<tr valign="top">
+									<td align="right" class="bibtexnumber">
+									[<a name="unpublishedcompotts">2</a>]
+									</td>
+									<td class="bibtexitem">
+									Hugo Talibart and Fran&#x00E7;ois Coste.
+									 Compotts: Optimal alignment of coevolutionary models for protein
+									  sequences.
+									 unpublished, 2020.
+									[&nbsp;<a href="my_biblio_bib.html#unpublishedcompotts">bib</a>&nbsp;]
+
+									</td>
+									</tr>
+
 
 									<tr valign="top">
 									<td align="right" class="bibtexnumber">
-									[<a name="dyrka2019estimating">2</a>]
+									[<a name="dyrka2019estimating" href="https://peerj.com/articles/6559/">3</a>]
 									</td>
 									<td class="bibtexitem">
 									Witold Dyrka, Mateusz Pyzik, Fran&#x00E7;ois Coste, and Hugo Talibart.
@@ -130,15 +151,23 @@
 
 							<section id="bio">
 								<div class="container">
-									<h3>Background</h3>
+									<h3>Resume</h3>
 
 									<h4>Experience</h4>
+									<date>2017-now</date>
+									<cv_item>
+										<endroit>Dyliss Team, IRISA, Université de Rennes 1, France</endroit>
+										<br/>
+										<item_name>PhD thesis</item_name>
+										<cv_description>Modelling proteins with long-distance interactions. Supervised by <a href="http://people.rennes.inria.fr/Francois.Coste/">François Coste</a> and <a href="http://people.rennes.inria.fr/Jacques.Nicolas/">Jacques Nicolas</a></cv_description>.
+									</cv_item>
+									<br/>
 									<date>2017</date>
 									<cv_item>
 										<endroit>LITIS Lab, Université de Rouen, France</endroit>
 										<br/>
 										<item_name>6-month internship</item_name>
-										<cv_description>Supervised learning of emergent structures in agent-based simulations. Internship supervised by <a href="http://pagesperso.litislab.fr/ptranouez/">Pierrick Tranouez</a>.</cv_description>
+										<cv_description>Supervised learning of emergent structures in agent-based simulations. Supervised by <a href="http://pagesperso.litislab.fr/ptranouez/">Pierrick Tranouez</a>.</cv_description>
 									</cv_item>
 									<br/>
 									<date>2016</date>
@@ -146,7 +175,7 @@
 										<endroit>King's College London, United Kingdom</endroit>
 										<br/>
 										<item_name>3-month internship</item_name>
-										<cv_description>RNA meta-stable secondary structures clustering. Internship supervised by <a href="https://www.kcl.ac.uk/people/kathleen-steinhofel">Kathleen Steinhöfel</a>.</cv_description>
+										<cv_description>RNA meta-stable secondary structures clustering. Supervised by <a href="https://www.kcl.ac.uk/people/kathleen-steinhofel">Kathleen Steinhöfel</a>.</cv_description>
 
 									<br/>
 									<br/>
