@@ -75,10 +75,10 @@
 		    This thesis focused on <b>protein homology search</b> and <b>protein family modelling</b>. As of today, the standard way of modelling a set of protein sequences is to use profile Hidden Markov Models. These statistical models represent protein families with positional information and insertion and deletion states. Widely used packages such as HH-suite provide tools to perform sequence-HMM alignment and HMM-HMM alignment and the similarity score they yield is used to determine whether two protein sequences are homologous or not. While powerful, HMMs are limited by their positional nature. Yet, it is well-known that two residues that are distant in the sequence can co-evolve, for instance because they are in contact in the 3D structure. In our work, we propose to use a different type of model: the <b>Potts model</b>. This model was introduced by <a href="https://en.wikipedia.org/wiki/Direct_coupling_analysis">Direct Coupling Analysis</a>, originally to predict contacts and protein-protein interactions. Its parameters can describe both positional conservation and couplings between positions, which make it a great candidate to model sets of homologous proteins.
 		    <br/>
 		    <br/>
-		    During my PhD, I designed <b>PPalign</b>, a method to align two Potts models and give a similarity score for this alignment. The feasibility of this alignment method was assessed on a <a href="https://www-dyliss.irisa.fr/PPalign/">benchmark</a> of low sequence identity reference sequence alignments, where suboptimal solutions were found in tractable time and the quality of our alignments was on average slightly better than our main competitor HHalign with respect to reference alignments, with better results on pairs with the lowest sequence identity <cite_publi>[2]</cite_publi>.
+		    During my PhD, I designed <b>PPalign</b>, a method to align two Potts models and give a similarity score for this alignment. The feasibility of this alignment method was assessed on a <a href="https://www-dyliss.irisa.fr/PPalign/">benchmark</a> of low sequence identity reference sequence alignments, where suboptimal solutions were found in tractable time and the quality of our alignments was on average slightly better than our main competitor HHalign with respect to reference alignments, with better results on pairs with the lowest sequence identity <cite_publi>[1]</cite_publi>.
 		    <br/>
 		    <br/>
-		    I presented my method at the conference JOBIM 2020 <cite_publi>[1]</cite_publi> during the Protein and Structure parallel session on July 3 2020, my slides are available <a href="jobim_2020_compotts_hugo_talibart.pdf">here</a>.
+		    I presented my method at the conference JOBIM 2020 <cite_publi>[2]</cite_publi> during the Protein and Structure parallel session on July 3 2020, my slides are available <a href="jobim_2020_compotts_hugo_talibart.pdf">here</a>.
 		    <br/>
 		    <br/>
 		    I am currently working as a postdoctoral researcher at the <a href="https://isyeb.mnhn.fr/fr/atelier-de-bio-informatique-384">Atelier de BioInformatique</a> at the Institut de Systématique, Évolution, Biodiversité (ISYEB) at the Muséum National d'Histoire Naturelle (MNHN Paris)
@@ -103,6 +103,21 @@
 
 
 									<table>
+										
+										
+										<tr valign="top">
+										<td align="right" class="bibtexnumber">
+										[<a name="talibart2021ppalign">2</a>]
+										</td>
+										<td class="bibtexitem">
+										Hugo Talibart and Fran&ccedil;ois Coste.
+										 Ppalign: optimal alignment of potts models representing proteins with
+										  direct coupling information.
+										 <em>BMC bioinformatics</em>, 22(1):1--22, 2021.
+										[&nbsp;<a href="my_biblio_bib.html#talibart2021ppalign">bib</a>&nbsp;]
+
+										</td>
+										</tr>
 
 									<tr valign="top">
 									<td align="right" class="bibtexnumber">
@@ -119,19 +134,6 @@
 									</td>
 									</tr>
 
-									<tr valign="top">
-									<td align="right" class="bibtexnumber">
-									[<a name="talibart2020ppalign">2</a>]
-									</td>
-									<td class="bibtexitem">
-									Hugo Talibart and Fran&#x00E7;ois Coste.
-									 Ppalign: Optimal alignment of potts models representing proteins with
-									  direct coupling information.
-									 <em>bioRxiv</em>, 2020.
-									[&nbsp;<a href="my_biblio_bib.html#talibart2020ppalign">bib</a>&nbsp;]
-
-									</td>
-									</tr>
 
 
 									<tr valign="top">
