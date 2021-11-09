@@ -1787,7 +1787,7 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #671327;
+		color: #178fb0;
 		font-size: 3.5em;
 	}
 
@@ -1850,7 +1850,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #671327;
+			border-color: #178fb0;
 		}
 
 	select {
@@ -1955,7 +1955,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #671327;
+			border-color: #178fb0;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2404,7 +2404,7 @@ input, select, textarea {
 			}
 
 			ul.feature-icons li:before {
-				background: #671327;
+				background: #178fb0;
 				border-radius: 100%;
 				color: #ffffff;
 				display: block;
@@ -2620,7 +2620,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #671327;
+			background-color: #178fb0;
 			color: #ffffff !important;
 		}
 
@@ -2702,7 +2702,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #671327;
+		background: #178fb0;
 		color: #fff3f4;
 		height: 100%;
 		overflow-y: auto;
@@ -2792,7 +2792,7 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #671327;
+					border-top: solid 2px #178fb0;
 					display: block;
 					padding: 0;
 				}
@@ -2811,7 +2811,7 @@ input, select, textarea {
 
 						#header > nav ul li a.active {
 							background: #fff;
-							color: #671327 !important;
+							color: #178fb0 !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -3079,7 +3079,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #671327;
+						background: #178fb0;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
@@ -3350,7 +3350,7 @@ cv_item cv_description
 
 endroit
 {
-    color: #671327;
+    color: #178fb0;
     font-size: 1.0em;
     font-weight: bold;
     margin-bottom: 0px;
