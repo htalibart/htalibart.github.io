@@ -70,15 +70,19 @@
                 and <a href="http://people.rennes.inria.fr/Jacques.Nicolas/">Jacques Nicolas</a>, from november 2017 to february 2021.
                 
                 <br/>
+			<br/>
                 
 								This <a href="manuscript_TALIBART_Hugo.pdf">thesis</a> focused on <b>protein sequence homology search</b> and <b>protein family modelling</b>, with the added novelty of taking into account <b> residue co-evolution </b>.
                 	
                 	<br/>
+			<br/>
                 	
                 	As of today, homologous protein sequences are standardly modeled using profile Hidden Markov Models (pHMMs), statistical models that represent protein families with positional conservation information. Widely used packages such as HH-suite provide tools to perform sequence-HMM alignment and HMM-HMM alignment and the similarity score they yield is used to determine whether two protein sequences are homologous or not. While such models are powerful, they can only model each position in a protein independently of each other, yet it is well-known that two residues that are distant in the sequence can co-evolve, for instance when they are in contact in the 3D structure. In our work, we proposed to use a different type of model: the <b>Potts model</b>, a pairwise Markov Random Field originally introduced by a href="https://en.wikipedia.org/wiki/Direct_coupling_analysis">Direct Coupling Analysis</a> to predict contacts and protein-protein interactions. Its parameters can describe both positional conservation and couplings between positions, which make it a great candidate to model sets of homologous proteins.
                 
                 <br/>
+		<br/>
 		    During my PhD, I designed <b>PPalign</b>, a method to align two Potts models and give a similarity score for this alignment. The feasibility of this alignment method was assessed on a <a href="https://www-dyliss.irisa.fr/PPalign/">benchmark</a> of low sequence identity reference sequence alignments, where suboptimal solutions were found in tractable time and the quality of our alignments was on average slightly better than our main competitor HHalign with respect to reference alignments, with better results on pairs with the lowest sequence identity <cite_publi>[1]</cite_publi>. It was presented at the JOBIM 2020 conference <cite_publi>[2]</cite_publi> during the Protein and Structure parallel session on July 3 2020, slides are available <a href="jobim_2020_compotts_hugo_talibart.pdf">here</a>.
+		<br/>
 		<br/>
                 
                 Since Potts models were originally designed to predict co-evolving positions within a given set of homologous sequences, comparing two Potts models representing two different sets of homologous sequences raised additional challenges and a need for canonicity. To address these challenges, I worked with <a href="https://isyeb.mnhn.fr/fr/annuaire/mathilde-carpentier-368">Mathilde Carpentier</a> at <a href="https://isyeb.mnhn.fr/fr/atelier-de-bio-informatique-384">Atelier de BioInformatique</a> (Institut de Systématique, Évolution, Biodiversité (ISYEB), Muséum National d'Histoire Naturelle (MNHN), Paris) as a post-doctoral researcher from 2021 to 2022. We paved the way for the modelling of protein sequences with direct coupling information for the special task of pairwise comparison.
