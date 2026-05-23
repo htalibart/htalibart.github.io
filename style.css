@@ -12,6 +12,7 @@ html {
   --text-tertiary: #5a6a80;
 
   --font-sans: sans-serif;
+  --font-headings: Monospace;
 
   --border-radius: 0.375em;
   --content-max-width: 1500px;
@@ -81,6 +82,7 @@ nav {
   background-color: rgba(13, 27, 42, 0.95);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border-color);
+  font-family: var(--font-headings);
 }
 .nav-inner {
   max-width: 56rem;
@@ -129,6 +131,7 @@ nav {
 }
 .bio-name {
   font-size: var(--font-size-name);
+  font-family: var(--font-headings);
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: var(--space-smallest);
@@ -156,6 +159,7 @@ nav {
   align-items: center;
   gap: var(--space-small);
   font-size: var(--font-size-small);
+  font-family: var(--font-headings);
   font-weight: 500;
   color: var(--accent);
   border: 1px solid var(--accent-dark);
@@ -181,6 +185,7 @@ section:last-of-type {
 
 h2 {
   font-size: var(--font-size-small);
+  font-family: var(--font-headings);
   font-weight: 600;
   color: var(--accent);
   text-transform: uppercase;
@@ -208,6 +213,7 @@ h2 {
 }
 .timeline-org {
   font-size: var(--font-size-small);
+  font-family: var(--font-headings);
   font-weight: 600;
   color: var(--accent);
 }
@@ -239,6 +245,7 @@ h2 {
 }
 .software-name {
   font-weight: 600;
+  font-family: var(--font-headings);
   font-size: var(--font-size-large);
   color: var(--text-primary);
   margin-bottom: var(--space-smallest);
