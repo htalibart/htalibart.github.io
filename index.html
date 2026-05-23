@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hugo Talibart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-name" href="#">Hugo Talibart</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#software">Software</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#side-projects">Side projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="content">
+
+    <div class="bio" id="about">
+      <div class="bio-name">Hugo Talibart</div>
+      <div class="bio-text">
+        <p>
+        Hi! I'm Hugo, a passionate computer scientist.
+        </p>
+
+        <p>
+        Over 8+ years in research labs (INRIA Rennes, MNHN Paris, Université Libre de Bruxelles), I designed and implemented algorithms.
+        So far, computational biology was my main playground: the problems are fascinating, the data is complex, and there's always so many different ways to look at them.
+        </p>
+
+        <p>
+        I've used computer science and mathematical tools (Integer Linear Programming (ILP), graphical statistical models, formal grammars, deep generative models) to address problems in protein sequence alignment, mutational landscape prediction, molecular generation, and bias-controlled benchmarking of machine learning predictors.
+        </p>
+
+        <p>
+        On the side, I also build things for fun: <a href="https://wikiddle.com" target="_blank">wikiddle.com</a>, a daily puzzle game website based on Wikipedia.
+        </p>
+
+      </div>
+      <div class="bio-links">
+        <a class="bio-link" href="https://linkedin.com/in/hugo-talibart-369190a7" target="_blank">LinkedIn</a>
+        <a class="bio-link" href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#117;&#103;&#111;&#46;&#116;&#97;&#108;&#105;&#98;&#97;&#114;&#116;&#64;&#112;&#114;&#111;&#116;&#111;&#110;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">email</a>
+        <a class="bio-link" href="data/CV_Talibart_Hugo.pdf" target="_blank">CV</a>
+      </div>
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <span class="timeline-period">2017 – 2021</span>
+          <span class="timeline-org">INRIA Rennes</span>
+          <span class="timeline-role">PhD researcher</span>
+        </div>
+        <div class="timeline-narrative">
+          <p>I started my career at INRIA <i>(Institut National de Recherche en Informatique et Automatique)</i> as a PhD researcher, under the supervision of <a href="http://people.rennes.inria.fr/Francois.Coste/">François Coste</a>.
+          Together we introduced <a href="#ppalign_paper">PPalign</a>, a method for pairwise Markov Random Field alignment based on Integer Linear Programming, with application to protein sequences.
+          Previous methods modelled protein sequence families using Hidden Markov Models (HMMs), looking at each position independently ("how frequent is this amino acid at this position?"). We proposed to use Potts models, which also capture dependencies between positions: not just individual frequencies but also how residues interact with each other. Aligning such models is significantly harder: the pairwise dependencies make the problem NP-hard.
+          Our contribution was to formulate it as an ILP problem and solve it in tractable time, outperforming HMM baselines in alignment quality.
+          </p>
+          <p>
+          Early in my thesis, I also had the opportunity to work with <a href="https://wppt.pwr.edu.pl/pracownicy/profil.html?name=witoldwdyrka-2263">Witold Dyrka</a> from Politechnika Wrocławska (Wrocław, Poland) on training <a href="#witold_paper">probabilistic context-free grammars</a> on protein sequence families using structural contact constraints.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <span class="timeline-period">2021 – 2022</span>
+          <span class="timeline-org">MNHN Paris</span>
+          <span class="timeline-role">Postdoctoral researcher</span>
+        </div>
+        <div class="timeline-narrative">
+          <p>I then joined the National Museum of Natural History <i>(MNHN Paris, Sorbonne Université)</i> for a year as a postdoctoral researcher with <a href="https://isyeb.mnhn.fr/fr/annuaire/mathilde-carpentier-368">Mathilde Carpentier</a>. We experimented on alternative statistical approaches to build canonical, comparable models, and extended the PPalign solver to take into account the fact that insertions are more likely at some positions than others.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker">
+          <span class="timeline-period">2023 – Present</span>
+          <span class="timeline-org">ULB Brussels</span>
+          <span class="timeline-role">Postdoctoral researcher</span>
+        </div>
+        <div class="timeline-narrative">
+          <p>
+          I then moved to Brussels to work with <a href="https://3bio.polytech.ulb.be/en/bioinfo">Dimitri Gilis</a> at ULB <i>(Université Libre de Bruxelles)</i>.
+          </p>
+          <p>
+          My first project there was a <a href="#chembed_paper">Transformer variational autoencoder</a> trained to embed molecules into a structured, continuous latent space where distances reflect similarity, with application to molecular representation and optimization. The model was shipped as a <a href="#chembed_software">user-friendly pip package</a>.
+          </p>
+          <p>
+          I also collaborated with Matsvei Tsishyn on <a href="#structuredca_software">StructureDCA</a>, a sparse Potts model inference method with structural constraints. The method, based on a C++ solver with a Python interface, achieves <a href="#structuredca_paper">state-of-the-art performance</a> in mutational landscape prediction.
+          </p>
+          <p>
+          Currently, I'm working on a framework for benchmark construction: given a dataset, it selects and partitions samples to control biases such as entities having strongly skewed label distributions or similar entities leaking between train and test, preventing machine learning from exploiting shortcuts, and allowing for a more reliable evaluation. Enforcing all these constraints simultaneously is a combinatorial problem which we solved using Integer Linear Programming, to be released as a <a href="#optidup_software">pip package</a> soon.
+          The framework is already being applied to olfactory receptor activation prediction as part of a Master's thesis I am supervising.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="software">
+      <h2>Software</h2>
+
+      <div class="software-card" id="optidup_software">
+        <div class="software-name">OptiDUP <span class="tba">(coming soon)</span></div>
+        <div class="software-desc">A Python package for bias-controlled benchmark construction: undersampling and partitioning under user-defined constraints, powered by ILP.</div>
+        <div class="software-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">ILP</span>
+          <span class="tech-tag">OR-Tools</span>
+        </div>
+      </div>
+
+      <div class="software-card" id="chembed_software">
+        <div class="software-name"><a href="https://github.com/3BioCompBio/chembed" target="_blank">chembed</a></div>
+        <div class="software-desc">A Python package for molecular encoding and generation. Embeds molecules into a structured continuous latent space where distances reflect chemical similarity, enabling smooth exploration and generation of novel molecules. Large-scale Transformer VAE, released with pre-trained weights, ready to use or fine-tune.</div>
+        <div class="software-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">PyTorch</span>
+          <span class="tech-tag">Transformer</span>
+          <span class="tech-tag">Variational Autoencoder</span>
+          <span class="tech-tag">generative AI</span>
+        </div>
+        <div class="software-links">
+          <code><a href="https://pypi.org/project/chembed" target="_blank">pip install chembed</a></code>
+          <a href="https://github.com/3BioCompBio/chembed" target="_blank"><img src="images/GitHub_Invertocat_Black.svg" alt="GitHub" width="12" height="12"> github</a>
+        </div>
+      </div>
+
+      <div class="software-card" id="structuredca_software">
+        <div class="software-name"><a href="https://github.com/3BioCompBio/StructureDCA" target="_blank">StructureDCA</a></div>
+        <div class="software-desc">A Python package for protein mutation effect prediction. Sparse structure-informed graphical model inference with a C++ solver backend.</div>
+        <div class="software-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">C++</span>
+        </div>
+        <div class="software-links">
+          <code><a href="https://pypi.org/project/structuredca/" target="_blank">pip install structuredca</a></code>
+          <a href="https://github.com/3BioCompBio/StructureDCA" target="_blank"><img src="images/GitHub_Invertocat_Black.svg" alt="GitHub" width="12" height="12"> github</a>
+        </div>
+      </div>
+
+      <div class="software-card">
+        <div class="software-name"><a href="https://github.com/htalibart/ppsuite" target="_blank">PPalign</a></div>
+        <div class="software-desc">Exact ILP-based alignment of Potts models, applied to protein sequence alignment.</div>
+        <div class="software-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">C++</span>
+          <span class="tech-tag">ILP</span>
+        </div>
+        <div class="software-links">
+          <a href="https://github.com/htalibart/ppsuite" target="_blank"><img src="images/GitHub_Invertocat_Black.svg" alt="GitHub" width="12" height="12"> github</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <div class="pub-item" id="structuredca_paper">
+        <div class="pub-title"><a href="https://doi.org/10.64898/2026.03.27.714804" target="_blank">Structure-informed direct coupling analysis improves protein mutational landscape predictions</a></div>
+        <div class="pub-authors">Matsvei Tsishyn, <strong>Hugo Talibart</strong>, Marianne Rooman, Fabrizio Pucci</div>
+        <div class="pub-venue">bioRxiv · 2026</div>
+      </div>
+
+      <div class="pub-item" id="chembed_paper">
+        <div class="pub-title"><a href="https://doi.org/10.64898/2025.12.19.695394" target="_blank">Learning a chemistry-aware latent space for molecular encoding and generation with a large-scale Transformer Variational Autoencoder</a></div>
+        <div class="pub-authors"><strong>Hugo Talibart</strong>, Dimitri Gilis</div>
+        <div class="pub-venue">bioRxiv · 2025</div>
+      </div>
+
+      <div class="pub-item" id="ppalign_paper">
+        <div class="pub-title"><a href="https://doi.org/10.1186/s12859-021-04222-4" target="_blank">PPalign: optimal alignment of Potts models representing proteins with direct coupling information</a></div>
+        <div class="pub-authors"><strong>Hugo Talibart</strong>, François Coste</div>
+        <div class="pub-venue">BMC Bioinformatics · 2021</div>
+      </div>
+
+      <div class="pub-item" id="witold_paper">
+        <div class="pub-title"><a href="https://doi.org/10.7717/peerj.6559" target="_blank">Estimating probabilistic context-free grammars for proteins using contact map constraints</a></div>
+        <div class="pub-authors">Witold Dyrka, Mateusz Pyzik, François Coste, <strong>Hugo Talibart</strong></div>
+        <div class="pub-venue">PeerJ · 2019</div>
+      </div>
+
+    </section>
+
+    <section id="side-projects">
+      <h2>Side projects</h2>
+      <div class="software-card">
+        <div class="software-name"><a href="https://wikiddle.com" target="_blank">wikiddle.com</a></div>
+        <div class="software-desc">A daily puzzle game based on Wikipedia: guess a mystery article based on the links it contains. Full-stack, self-hosted.</div>
+        <div class="software-tech">
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">SQL</span>
+        </div>
+        <div class="software-links">
+          <a href="https://github.com/htalibart/wikiddle" target="_blank"><img src="images/GitHub_Invertocat_Black.svg" alt="GitHub" width="12" height="12"> wikiddle</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="edu-item">
+        <div class="edu-header">
+          <span class="edu-degree">PhD in Computer Science</span>
+          <span class="edu-period">2017 – 2021</span>
+        </div>
+        <div class="edu-org">INRIA · Université de Rennes 1, Rennes, France</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-header">
+          <span class="edu-degree">Master in Theoretical Computer Science</span>
+          <span class="edu-period">2016 – 2017</span>
+        </div>
+        <div class="edu-org">Université de Rouen, Rouen, France</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-header">
+          <span class="edu-degree">Engineering Degree in Mathematics</span>
+          <span class="edu-period">2012 – 2017</span>
+        </div>
+        <div class="edu-org">Institut National des Sciences Appliquées (INSA), Rouen, France</div>
+      </div>
+
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-table">
+        <div class="skill-row">
+          <div class="skill-label">Languages</div>
+          <div class="skill-value">Python, C/C++, JavaScript, HTML/CSS, Bash</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">ML & Data</div>
+          <div class="skill-value">PyTorch, NumPy, SciPy, Pandas, scikit-learn</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Tools</div>
+          <div class="skill-value">Git, Conda, Docker / Singularity</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Environment</div>
+          <div class="skill-value">Linux, cluster computing (Slurm)</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Languages</div>
+          <div class="skill-value">French (native), English (fluent)</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
